@@ -61,35 +61,80 @@
 - **Node.js 18+**（[nodejs.org](https://nodejs.org/)）—— 唯一的硬性依赖
 - 安装 DSH 宿主插件时，还需 DSH 命令 `dsh` 可用
 
-### 最快方式（git clone 后运行）
+### 按平台一键安装（复制对应平台的整段命令即可）
+
+先克隆仓库（所有平台通用，只需一次）：
 
 ```bash
 git clone https://github.com/SOCOOL666/research-superpack.git
 cd research-superpack
-
-# Windows PowerShell
-.\install.ps1
-
-# macOS / Linux
-bash install.sh
 ```
 
-默认安装到 **DeepSeek Harness**（`~/.dsh/skills`）。
+然后按你要装的平台，选下面对应的一段整段复制执行：
 
-### 选择目标 Agent
+#### 🟦 the agent runtime（默认，含 Office 工具插件）
 
-用 `--agent`（或 `-a`），多个用英文逗号分隔：
-
+```powershell
+# Windows PowerShell
+.\install.ps1 --agent dsh
+```
 ```bash
-# PowerShell
-.\install.ps1 --agent codex,claude-code,workbuddy
-
-# 所有支持的 agent
-.\install.ps1 --agent all
-
 # macOS / Linux
+bash install.sh --agent dsh
+```
+> 会自动把 26 个技能装到 `~/.dsh/skills`，并尝试 `dsh plugin add dsh-office-toolkit`。装完重启 Harness 并新建会话生效。
+
+#### 🟩 OpenAI Codex
+
+```powershell
+.\install.ps1 --agent codex
+```
+```bash
+bash install.sh --agent codex
+```
+> 技能装到 `~/.codex/skills`，重启 Codex 生效。
+
+#### 🟪 Claude Code
+
+```powershell
+.\install.ps1 --agent claude-code
+```
+```bash
+bash install.sh --agent claude-code
+```
+> 技能装到 `~/.claude/skills`，重启 Claude Code 生效。
+
+#### 🟨 WorkBuddy
+
+```powershell
+.\install.ps1 --agent workbuddy
+```
+```bash
+bash install.sh --agent workbuddy
+```
+> 技能装到 `~/.workbuddy/skills`（Windows 为 `%USERPROFILE%\.workbuddy\skills`）。若已存在同名技能目录，默认跳过；要覆盖加 `--force`（会先备份）。
+
+#### 🟫 一次装到所有平台
+
+```powershell
+.\install.ps1 --agent all
+```
+```bash
+bash install.sh --agent all
+```
+> 检测到哪个 agent 就装到哪个，未安装的目录会按需创建。
+
+#### 装到多个指定平台
+
+```powershell
+.\install.ps1 --agent codex,claude-code,workbuddy
+```
+```bash
 bash install.sh -a codex,claude-code,workbuddy
 ```
+
+> 不想装 DSH 宿主插件（只装技能）：任意命令后加 `--skip-plugin`。
+
 
 支持的 `--agent` 值与技能目录：
 
