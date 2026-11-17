@@ -1,7 +1,7 @@
 # research-superpack · 科研工作必备插件一键安装套装
 
 > 一个仓库装齐全套科研能力：**Nature 论文写作 / 去 AI 味 / AI 做 PPT / Word·Excel 读写**。
-> 一次安装，适配 the agent runtime、Codex、Claude Code、WorkBuddy、Gemini CLI、OpenCode、Cursor、Cline 等主流 Agent。
+> 一次安装，适配 the agent runtime、DeepSeek Harness、Codex、Claude Code、WorkBuddy、Gemini CLI、OpenCode、Cursor、Cline 等主流 Agent。
 
 [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![node](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org/)
