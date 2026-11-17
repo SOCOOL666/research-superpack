@@ -1,0 +1,124 @@
+{
+  "name": "research-superpack",
+  "version": "1.0.0",
+  "updated": "2026-11-17",
+  "description": "科研工作必备插件一键安装套装：Nature 论文写作、去 AI 味、AI 做 PPT、Word/Excel 读写。适配 DeepSeek Harness / Codex / Claude Code / WorkBuddy / Gemini CLI / OpenCode 等。",
+  "license": "MIT",
+  "starNote": "star 数据来自 shields.io，采集于 2026-11-17，仅作参考，不代表质量背书。",
+  "sources": {
+    "nature-skills": {
+      "repo": "Yuan1z0825/nature-skills",
+      "type": "skills-bundle",
+      "archiveRoot": "nature-skills-main",
+      "skillsRoot": "skills",
+      "skillMap": [
+        { "name": "nature-academic-search", "dir": "nature-academic-search" },
+        { "name": "nature-citation", "dir": "nature-citation" },
+        { "name": "nature-data", "dir": "nature-data" },
+        { "name": "nature-downloader", "dir": "nature-downloader" },
+        { "name": "nature-experiment-log", "dir": "nature-experiment-log" },
+        { "name": "nature-figure", "dir": "nature-figure" },
+        { "name": "nature-image2ppt", "dir": "nature-image2ppt" },
+        { "name": "nature-literature-pipeline", "dir": "nature-literature-pipeline" },
+        { "name": "nature-paper-card", "dir": "nature-paper-card" },
+        { "name": "nature-paper-to-patent", "dir": "nature-paper-to-patent" },
+        { "name": "nature-paper-trans", "dir": "nature-paper-trans" },
+        { "name": "nature-paper-xray", "dir": "nature-paper-xray" },
+        { "name": "nature-paper2ppt", "dir": "nature-paper2ppt" },
+        { "name": "nature-paper2word", "dir": "nature-paper2word" },
+        { "name": "nature-polishing", "dir": "nature-polishing" },
+        { "name": "nature-proposal-writer", "dir": "nature-proposal-writer" },
+        { "name": "nature-reader", "dir": "nature-reader" },
+        { "name": "nature-ref-verifier", "dir": "nature-ref-verifier" },
+        { "name": "nature-response", "dir": "nature-response" },
+        { "name": "nature-reviewer", "dir": "nature-reviewer" },
+        { "name": "nature-shared", "dir": "nature-shared" },
+        { "name": "nature-social-science", "dir": "nature-social-science" },
+        { "name": "nature-statistics", "dir": "nature-statistics" },
+        { "name": "nature-writing", "dir": "nature-writing" }
+      ],
+      "stars": "54k",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/Yuan1z0825/nature-skills",
+      "summary": "符合 Nature 论文学术表达与科研绘图的 Skill 库，23 个技能：论文精读、润色、写作、审稿模拟、返修、科研绘图、文献检索、论文转 PPT/Word 等。"
+    },
+    "humanizer": {
+      "repo": "blader/humanizer",
+      "type": "skills-bundle",
+      "archiveRoot": "humanizer-main",
+      "skillsRoot": "",
+      "skillMap": [
+        { "name": "humanizer", "dir": "." }
+      ],
+      "stars": "70k",
+      "license": "MIT",
+      "homepage": "https://github.com/blader/humanizer",
+      "summary": "去除文本 AI 味：基于维基百科《Signs of AI writing》，识别并改写 26 种 AI 写作痕迹。"
+    },
+    "ppt-master": {
+      "repo": "hugohe3/ppt-master",
+      "type": "skills-bundle",
+      "archiveRoot": "ppt-master-main",
+      "skillsRoot": "skills",
+      "skillMap": [
+        { "name": "ppt-master", "dir": "ppt-master" }
+      ],
+      "stars": "78k",
+      "license": "MIT",
+      "homepage": "https://github.com/hugohe3/ppt-master",
+      "summary": "AI 驱动的 PPT 工作流：生成可编辑 PPTX、美化、图片转 PPT、模板、旁白与动画。"
+    },
+    "dsh-office-toolkit": {
+      "repo": "cnkids/dsh-office-toolkit",
+      "type": "dsh-host-plugin",
+      "npm": "dsh-office-toolkit",
+      "stars": "3",
+      "license": "MIT",
+      "homepage": "https://github.com/cnkids/dsh-office-toolkit",
+      "summary": "DSH 宿主插件：注册 8 个 Word/Excel 读写工具（office_read / office_query / office_write_* / office_edit_* / office_fill_docx_template / office_convert）。star 很少，但补齐了 DSH 的 Office 工具能力。"
+    }
+  },
+  "agents": {
+    "dsh": {
+      "name": "DeepSeek Harness",
+      "skillsRoot": "~/.dsh/skills",
+      "plugin": true,
+      "note": "技能放在 ~/.dsh/skills；宿主插件用 dsh plugin add 安装，重启后生效。"
+    },
+    "codex": {
+      "name": "OpenAI Codex",
+      "skillsRoot": "~/.codex/skills",
+      "note": "全局技能目录。"
+    },
+    "claude-code": {
+      "name": "Claude Code",
+      "skillsRoot": "~/.claude/skills",
+      "note": "全局技能目录。"
+    },
+    "workbuddy": {
+      "name": "WorkBuddy",
+      "skillsRoot": "~/.workbuddy/skills",
+      "note": "Windows 上为 %USERPROFILE%\\.workbuddy\\skills。"
+    },
+    "gemini-cli": {
+      "name": "Gemini CLI",
+      "skillsRoot": "~/.gemini/skills",
+      "note": "全局技能目录。"
+    },
+    "opencode": {
+      "name": "OpenCode",
+      "skillsRoot": "~/.config/opencode/skills",
+      "note": "全局技能目录。"
+    },
+    "cursor": {
+      "name": "Cursor",
+      "skillsRoot": "~/.cursor/skills",
+      "note": "全局技能目录。"
+    },
+    "cline": {
+      "name": "Cline",
+      "skillsRoot": "~/.cline/skills",
+      "note": "全局技能目录。"
+    }
+  }
+}
