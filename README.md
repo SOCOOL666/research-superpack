@@ -64,7 +64,7 @@
 ### 最快方式（git clone 后运行）
 
 ```bash
-git clone https://github.com/<你的用户名>/research-superpack.git
+git clone https://github.com/SOCOOL666/research-superpack.git
 cd research-superpack
 
 # Windows PowerShell
